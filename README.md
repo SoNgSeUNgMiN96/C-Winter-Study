@@ -15,18 +15,18 @@
 ### 일정
 |**주차**|**파트**|**담당자**|
 |----|----|----|
-|1주차|해시| [송승민] |
-|2주차|정렬| [맹정후] |
-|3주차|스택/큐| [김민표] |
-|4주차|힙(+ 트리순회)| [김기찬]) |
-|5주차|문자열| [박주한] |
-|6주차|이진탐색(이분탐색)| [강하연] |
-|7주차|재귀/백트래킹/순열·조합| [송승민] |
-|8주차|DFS/BFS| [맹정후] |
-|9주차|분할정복(합병정렬)| [김민표] |
-|10주차|그래프와 탐색| [김기찬]) |
-|11주차|최단 경로| [박주한] |
-|12주차|동적 계획법(DP)| [강하연] |
+|1주차|해시| [송승민](https://github.com/SoNgSeUNgMiN96) |
+|2주차|정렬| [맹정후](https://github.com/MJHtheLEGEND) |
+|3주차|스택/큐| [김민표](https://github.com/rabbitate) |
+|4주차|힙(+ 트리순회)| [김기찬](https://github.com/Kichan01) |
+|5주차|문자열| [박주한](https://github.com/ParkJuhan94) |
+|6주차|이진탐색(이분탐색)| [강하연](https://github.com/KangHayeonn) |
+|7주차|재귀/백트래킹/순열·조합| [송승민](https://github.com/SoNgSeUNgMiN96) |
+|8주차|DFS/BFS| [맹정후](https://github.com/MJHtheLEGEND) |
+|9주차|분할정복(합병정렬)| [김민표](https://github.com/rabbitate) |
+|10주차|그래프와 탐색| [김기찬](https://github.com/Kichan01) |
+|11주차|최단 경로| [박주한](https://github.com/ParkJuhan94) |
+|12주차|동적 계획법(DP)| [강하연](https://github.com/KangHayeonn) |
 
 
 ### 문제 사이트 추천
