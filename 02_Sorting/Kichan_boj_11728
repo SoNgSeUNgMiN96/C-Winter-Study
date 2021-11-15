@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	int N,M,i,j;
+	scanf("%d %d", &N,&M);
+	int A[N];
+	int B[M];
+	int MAX = N+M;
+	int sorted[MAX];
+	
+	for(i=0; i<N; i++){
+		scanf("%d", &A[i]);
+	}
+	
+	for(j=0; j<M; j++){
+		scanf("%d", &B[j]);
+	}
+	
+	i=0;
+	j=0;
+	int k = 0;
+	int l;
+	while(i<N && j<M){
+		if(A[i]<=B[j]){
+			sorted[k++] = A[i++];
+		}
+		else{
+			sorted[k] = B[j];
+			k++;
+			j++;
+		}
+	}
+	
+	if(i == N){ //A배열이 다 옮겨진 경우 
+		for(l = j; l < M; l++)
+			sorted[k++] = B[l];
+	}
+	else{ //B배열이 다 옮겨진 경우 
+		for(l = i; l < N; l++)
+			sorted[k++] = A[l];
+	}
+	
+	for(i=0; i<MAX; i++){
+	printf("%d", sorted[i]);
+	}
+	
+	return 0;
+}
