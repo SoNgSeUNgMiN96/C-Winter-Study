@@ -1,0 +1,56 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+//삽입정렬로 시간초과 실패
+void insertion_sort(int arr[], int length);
+
+int main() {
+	int n, m, i;
+	int len;
+
+	scanf("%d %d", &n, &m);
+	len = n + m;
+	int* arr = malloc(sizeof(int) * (len));
+
+	for (i = 0; i < n; i++) {
+		scanf("%d", arr + i);
+	}
+
+	for (i = n; i < n + m; i++) {
+		scanf("%d", arr + i);
+	}
+	/*
+	{ 2 3 5 9 }
+	{ 1 4 7 } 
+	->{ 2 3 5 9 / 1 4 7 }
+	최선의 경우:    [정렬]   되어있을 때
+	최악의 경우: [역순 정렬] 되어있을 때
+
+	이 문제에서, 앞부분 절반 정도는 정렬되어있고, 뒷부분 절반 정도는 역순 정렬 되어있음.
+	*/
+	//=============================================
+	insertion_sort(arr, len);
+	for (i = 0; i < len; i++) {
+		printf("%d ", *(arr + i));
+	}
+
+	return 0;
+}
+
+// 삽입 정렬
+void insertion_sort(int arr[], int length) {
+
+	int i, j, key, tmp;
+
+	for (j = 1; j < length; j++) {
+		key = arr[j];
+		i = j - 1;
+		while (i >= 0 && arr[i] >= key) {
+			arr[i + 1] = arr[i];
+			i = i - 1;
+		}
+		arr[i + 1] = key;
+	}
+}
+
