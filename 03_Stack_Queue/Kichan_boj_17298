@@ -1,0 +1,116 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Node{ //노드 구조체 선언  
+	int data;
+	struct Node *next;
+}Node;
+
+typedef struct Queue{ // 큐 구조체 선언  
+	Node *front;
+	Node *rear;
+	int count;
+}Queue;
+
+void initQueue(Queue *queue); // queue초기화 
+// 큐가 비어있는지 확인
+int isEmpty(Queue *queue);
+// enqueue
+void Enqueue(Queue *queue, int data);
+// dequeue
+int Dequeue(Queue *queue);
+
+ 
+void initQueue(Queue *queue) {
+	queue->front = queue->rear = NULL;
+	queue->count = 0;
+}
+
+int isEmpty(Queue *queue) {
+	return queue->count == 0; // queue count 가 0일때 비어있다. 
+}
+// enqueue
+void Enqueue(Queue *queue, int data){
+     Node *now = (Node*)malloc(sizeof(Node));
+	 now->data = data;
+	 now->next = NULL;
+	 
+	 if(isEmpty(queue)){
+	 	queue->front = now;
+	 }	
+	 else
+	 {
+	 	queue->rear->next = now;
+	 }
+	 queue->rear = now;
+	 queue->count++;
+}
+
+// dequeue
+int Dequeue(Queue *queue){
+    int re = 0;
+	Node *now; //큐에서 빠져나가는 데이터 저장할 함수  
+	if(isEmpty(queue)){
+		return re; //큐가 비어있으면 돌려줄게 없음 
+	}
+	now = queue->front;
+	re = queue->front->data;
+	queue->front = now->next;
+	free(now);
+	queue->count--;	
+	return re;
+	
+}
+
+// front rear<-data입력 
+int main()
+{
+	int i,N;
+	Queue queue;
+	Queue queue1;
+	initQueue(&queue);
+	scanf("%d", &N);
+	int A[N];
+	int nge[N];
+	
+	// 정보 입력 
+	for(i=0; i<N; i++){
+		scanf("%d", &A[i]);
+		Enqueue(&queue, A[i]);
+	}
+	
+	// 오큰수 찾기 
+	
+	// 3-> 1-> 2-> 4->NULL
+	for(i=0; i<N-1; i++){
+		int k = Dequeue(&queue);
+		queue1.front = queue.front;
+		while(1){
+				
+			if(k< queue1.front->data){ // 본인보다 오른쪽중 큰수 찾기 
+				nge[i] = queue1.front->data;
+				break;
+			}
+			// 자신보다 큰수가 없는경우 
+			else if(queue1.front->data == NULL){
+				nge[i] = -1;
+				break;
+			}
+			queue1.front = queue1.front->next;
+			 
+				
+		}
+	} 
+		
+	nge[N-1] = -1;
+	for(i=0; i<N; i++){
+		printf("%d", nge[i]);
+	} 
+	
+	
+	return 0;
+}
+
+
+
+
