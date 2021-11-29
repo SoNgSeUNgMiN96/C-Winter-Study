@@ -1,0 +1,75 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_SIZE 500000
+int heap[MAX_SIZE];
+
+
+void push(int item, int *n)
+{
+	int i = 0;
+	i = ++(*n);	//++n값 
+
+	while ((i != 1) && item > heap[i/2]) {
+		heap[i] = heap[i / 2]; 
+		i = i / 2; 
+	}
+	heap[i] = item;
+}
+
+int delete(int *n){
+ int first, temp, parent, child;
+	first = heap[1];
+	temp = heap[(*n)--];	//n값--, temp = last node 
+	parent = 1;
+	child = 2;
+
+	while (child <= *n) {
+		if ((child < *n) && (heap[child] < heap[child + 1])) 
+			child++;
+
+		if (temp >= heap[child])  
+			break;
+
+		heap[parent] = heap[child]; 
+		parent = child;
+		child *= 2; 
+	}
+
+	heap[parent] = temp;
+	return first;
+}
+
+int main(void)
+{
+	int num[MAX_SIZE];
+	int n_Tot, n_Pre, input, j;
+	int i = 0, count = 0, n = 0, k = 0;
+	scanf("%d", &n_Tot);
+	
+	while(i < n_Tot){
+		scanf("%d", &n_Pre);
+		if(n_Pre == 0){
+			if(count == 0){
+				num[k] = -1;
+				k++;
+			} else {
+				num[k] = delete(&count);
+				k++;
+			}
+	
+		} 
+		for(j = 0; j < n_Pre; j++){
+			scanf("%d", &input);
+			push(input, &n);
+			count++;
+		}
+		i++;
+	}
+	for (j = 0; j < k; j++) {
+		printf("%d\n", num[j]);
+		
+	}
+
+
+}
