@@ -62,7 +62,6 @@ long binsearch(long max) {
     long long mid, res = 0;
 
     low = 0;
-//    high = trees[numTree - 1];
     high = max;
 
     while (low <= high) {
