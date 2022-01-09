@@ -135,7 +135,7 @@ int main() {
 
 ---
 
-### 예시코드 (DFS)
+### 예시코드 (BFS)
 ```c
 void BFS(int*** graph, int N, int START, int** bfs_arr) {
 	Queue queue;
@@ -161,7 +161,7 @@ void BFS(int*** graph, int N, int START, int** bfs_arr) {
 
 ```
 
-### 예시코드2 (DFS 적용 코드)
+### 예시코드2 (BFS 적용 코드)
 ```c
 #include <stdio.h>
 #include <stdlib.h>
