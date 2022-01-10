@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+// boj 4779 칸토어 집합
+// 전체를 3등분 후 가운데를 빈칸으로 만듬 
+// 아직 ---로 차있는부분으로 가서 똑같이 3등분 후 가운데를 빈칸으로 만듬
+// ---------    ->  ---   ---   -> - -   - -
+// 첫점과 (끝점+1)을 보내 3으로 나눈값:X
+// X~ 2X-1까지 빈칸으로 만듬
+// 다음 범위는 (0,X) , (2X, 3X)  
+
+bool cantor(char *arr, int first, int last)
+{
+	int x,i;
+	x = (last-first)/3;
+	
+	if(x>=1)	//3칸이상이 -으로 채워져있을때 
+	{
+		for(i = first+x; i<first+2*x; i++)
+		{
+			arr[i] = ' ';	// 가운데부분 빈칸으로 만들기 
+		}
+		cantor(arr, first, first+x);
+		cantor(arr, first+2*x, first+3*x);
+	}
+	else
+	{
+		return false;
+	}
+	 
+}
+
+//입력받는부분을 틀림
+int main() {
+	int N,i,k;
+	char *arr;
+	scanf("%d", &N);
+	k =1;
+	for(i=0; i<N; i++)
+	{
+		k = k*3;
+	}
+	//printf("%d\n",k);
+	arr = (char*)malloc(sizeof(char)*k+1);
+	for(i=0; i<=k; i++)
+	{
+		arr[i] = '-';
+	}
+	
+	cantor(arr, 0, k);
+	
+	for(i=0; i<k; i++)
+	{
+		printf("%c", arr[i]);
+	}
+	
+	
+	return 0;
+}
