@@ -44,6 +44,7 @@
         merge(data, p, q, r);
     }
 }
+
 void merge(int data[], int p, int q, int r) {
     int i = p, j = q+1, k = p;
     int tmp[8]; // 새 배열
@@ -117,7 +118,7 @@ int Partition(A[], n) {
 
 ### [ 이진 탐색 알고리즘 - 재귀 형태 ]
 ```c
-BinarySearch(A[], Left, Right, x) {
+void BinarySearch(A[], Left, Right, x) {
   if (Left > Right) return -1;	// 탐색 실패
   Mid = floor((Left + Right)/2);	// 바닥 함수
     
