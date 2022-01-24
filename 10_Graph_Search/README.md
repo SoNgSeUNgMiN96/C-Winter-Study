@@ -3,7 +3,7 @@
 -네트워크에서 정점 u와 정점 v를 연결하는 경로 중에서 간선들의 가중치 합이 최소가 되는 경로
 -간선의 가중치는 비용, 거리, 시간 등
 
-#Dijkstra의 최단경로 알고리즘
+# Dijkstra의 최단경로 알고리즘
 -하나의 노드에서 다른 하나의 노드로 가는 최단경로를 구하는 알고리즘
 ![image](https://user-images.githubusercontent.com/87978447/150760283-b461bfd3-dee6-4ffd-a862-fdf71fadbfbe.png)
 
@@ -116,7 +116,7 @@ int main()
 
 //출처: https://www.crocus.co.kr/533 [Crocus]
 ```
-#Floyd 알고리즘
+# Floyd 알고리즘
 -그래프에 존재하는 모든 정점사이의 최단경로를 찾음
 -3중for문을 이용
 ![image](https://user-images.githubusercontent.com/87978447/150762266-5a6a16e6-8711-48ac-9538-04ec0259940a.png)
