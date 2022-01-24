@@ -19,6 +19,7 @@ distance배열에서 가장 작은값을 뽑아(U)  최단경로 갱신
 ![image](https://user-images.githubusercontent.com/87978447/150761670-e3824a4d-0d01-4079-a02b-378228fa3c50.png)
 
 ### [ dijkstra 알고리즘 ]
+```c
 #include <stdio.h>
 #include <limits.h> // INT_MAX(int의 최댓값)에 이용
 #include <stdbool.h>
@@ -114,7 +115,7 @@ int main()
 
 
 //출처: https://www.crocus.co.kr/533 [Crocus]
-
+```
 #Floyd 알고리즘
 -그래프에 존재하는 모든 정점사이의 최단경로를 찾음
 -3중for문을 이용
@@ -125,7 +126,7 @@ if (A[i][k]+A[k][j] < A[i][j])  //정점k를 거칠때 거리가 더 짧은경�
 ![image](https://user-images.githubusercontent.com/87978447/150763828-5fd4b2a3-1c4b-4b51-bf1e-c317aeddf9e7.png)
  
 ### [ Floyd 알고리즘 ]
-
+```c
 #include<stdio.h>
 #include <limits.h>
  
@@ -224,3 +225,4 @@ int main()
 
 
 //출처: https://www.crocus.co.kr/537 [Crocus]
+```
