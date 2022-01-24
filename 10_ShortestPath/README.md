@@ -4,19 +4,11 @@
 -간선의 가중치는 비용, 거리, 시간 등
 
 # Dijkstra의 최단경로 알고리즘
--하나의 노드에서 다른 하나의 노드로 가는 최단경로를 구하는 알고리즘
-![image](https://user-images.githubusercontent.com/87978447/150760283-b461bfd3-dee6-4ffd-a862-fdf71fadbfbe.png)
+- 하나의 노드에서 다른 하나의 노드로 가는 최단경로를 구하는 알고리즘
 
-distance배열 : 최단경로가 알려진 정점들만을 이용한 다른 정점들까지의 최단경로 길이
+- distance배열 : 최단경로가 알려진 정점들만을 이용한 다른 정점들까지의 최단경로 길이
 distance배열에서 가장 작은값을 뽑아(U)  최단경로 갱신
 최단경로를 모르는경우(연결되어있지 않은경우 무한대로 표시)
-![image](https://user-images.githubusercontent.com/87978447/150761381-3c6ead46-6dc1-48b5-9835-d3165a7d3e0c.png)
-![image](https://user-images.githubusercontent.com/87978447/150761414-07a625ea-a8c3-4997-b503-8b1f7d1ba507.png)
-![image](https://user-images.githubusercontent.com/87978447/150761488-b9619686-a657-4be2-8392-d6a8660ce0a0.png)
-![image](https://user-images.githubusercontent.com/87978447/150761531-cc003626-a56e-44da-9cf1-b133233cf28e.png)
-![image](https://user-images.githubusercontent.com/87978447/150761570-69ef37f5-d4f0-437e-b553-9104b6a2a78e.png)
-![image](https://user-images.githubusercontent.com/87978447/150761619-cb777139-21ab-4d7b-b299-379cf70e930f.png)
-![image](https://user-images.githubusercontent.com/87978447/150761670-e3824a4d-0d01-4079-a02b-378228fa3c50.png)
 
 ### [ dijkstra 알고리즘 ]
 ```c
