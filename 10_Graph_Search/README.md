@@ -123,7 +123,10 @@ int main()
 if (A[i][k]+A[k][j] < A[i][j])  //정점k를 거칠때 거리가 더 짧은경우
   A[i][j] = A[i][k] + A[k][j] //최단거리 갱신
  
+ 
+ 
 ![image](https://user-images.githubusercontent.com/87978447/150763828-5fd4b2a3-1c4b-4b51-bf1e-c317aeddf9e7.png)
+ 
  
 ### [ Floyd 알고리즘 ]
 ```c
