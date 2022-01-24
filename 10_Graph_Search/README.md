@@ -6,6 +6,7 @@
 #Dijkstra의 최단경로 알고리즘
 -하나의 노드에서 다른 하나의 노드로 가는 최단경로를 구하는 알고리즘
 ![image](https://user-images.githubusercontent.com/87978447/150760283-b461bfd3-dee6-4ffd-a862-fdf71fadbfbe.png)
+
 distance배열 : 최단경로가 알려진 정점들만을 이용한 다른 정점들까지의 최단경로 길이
 distance배열에서 가장 작은값을 뽑아(U)  최단경로 갱신
 최단경로를 모르는경우(연결되어있지 않은경우 무한대로 표시)
