@@ -189,6 +189,8 @@ void main()
     free(g);
 }
 ```
+<br>
+<br>
 
 ### C로 구현한 인접리스트 그래프 코드
 ```c
@@ -270,6 +272,8 @@ int main()
     return 0;
 }
 ```
-
+<br>
+<br>
 이론 출처 : https://coding-factory.tistory.com/610
+<br>
 코드 출처 : https://velog.io/@kysung95/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-C%EB%A1%9C-%EA%B7%B8%EB%9E%98%ED%94%84%EB%A5%BC-%EB%A7%8C%EB%93%A4%EC%9E%90
