@@ -19,6 +19,7 @@
 진출 차수(out-degree) : 방향그래프에서 사용되는 용어로 한 노드에서 외부로 향하는 간선의 수를 뜻합니다.<br>
 진입차수(in-degree) : 방향그래프에서 사용되는 용어로 외부 노드에서 들어오는 간선의 수를 뜻합니다.<br>
 <br>
+
 ### 그래프 구현 방법 
 <br>
 그래프를 구현하는 방법에는 1.인접행렬(Adjacency Materix)와 2.인접리스트(Adjacency List)방식이 있습니다. <br>
@@ -26,80 +27,95 @@
 <br>
 <br>
 <br>
+
 ### 1.인접행렬 방식 
 ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F7RFhy%2FbtqKkOhoYiE%2FSE3IQP2q0g3xd34EQZkjM1%2Fimg.png)
 <br>
 인접행렬은 그래프의 노드를 2차원 배열로 만든 것입니다. 완성된 배열의 모양은 1, 2, 3, 4, 5, 6의 정점을 연결하는 노드에 다른 노드들이 인접 정점이라면 1, 아니면 0을 넣어줍니다.<br>
 <br>
 <br>
+
 #### 인접행렬 장점
 1. 2차원 배열 안에 모든 정점들의 간선 정보를 담기 때문에 배열의 위치를 확인하면 두 점에 대한 연결 정보를 조회할 때 O(1) 의 시간 복잡도면 가능합니다. <br>
 2. 구현이 비교적 간편합니다.<br>
 <br>
+
 #### 인접행렬 단점
 1. 모든 정점에 대해 간선 정보를 대입해야 하므로 O(n²) 의 시간복잡도가 소요됩니다.<br>
 2. 무조건 2차원 배열이 필요하기에 필요 이상의 공간이 낭비됩니다.<br>
 <br>
 <br>
 <br>
+
 #### 2.인접리스트 방식 
 ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FNlh1G%2FbtqKicb2Wub%2FsHWVSS6bn2FZdijEJVR2r1%2Fimg.png)
 <br>
 인접리스트란 그래프의 노드들을 리스트로 표현한것입니다. 주로 정점의 리스트 배열을 만들어 관계를 설정해줌으로써 구현합니다. 
 <br>
 <br>
+
 #### 인접리스트 장점
 1. 정점들의 연결 정보를 탐색할 때 O(n) 의 시간이면 가능합니다. (n: 간선의 갯수)
 2. 필요한 만큼의 공간만 사용하기때문에 공간의 낭비가 적습니다.
 <br>
+
 #### 인접리스트 단점
 1. 특정 두 점이 연결되었는지 확인하려면 인접행렬에 비해 시간이 오래 걸립니다. (배열보다 search 속도느림)
 2. 구현이 비교적 어렵습니다.
 <br>
 <br>
 <br>
+
 ### 다양한 그래프의 종류 
 그래프는 구현되어진 특성에 따라 여러가지 종류로 나누어집니다. 대표적인 그래프의 유형은 아래와 같습니다.
 <br>
 <br>
 <br>
+
 #### 1.무방향그래프
 ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F0ZsjG%2FbtqKjcbPzFp%2FEmai2Mc2IWMIAENKHr4Is1%2Fimg.png)
 <br>
 무방향 그래프는 두 정점을 연결하는 간선에 방향이 없는 그래프입니다.
 <br>
 <br>
+
 #### 2.방향그래프 
 ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbvvxel%2FbtqKkPUXTtY%2FpsdErjeixg2KkpZWHc9NqK%2Fimg.png)
 <br>
 방향 그래프는 두 정점을 연결하는 간선에 방향이 존재하는 그래프입니다. 간선의 방향으로만 이동할 수 있습니다. 
 <br>
 <br>
+
 #### 3.가중치그래프 
 ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FBVFRy%2FbtqKopgFBy3%2FSlXKIsNr2avTAKIyLnwuvk%2Fimg.png)
 <br>
 가중치 그래프는 두 정점을 이동할때 비용이 드는 그래프입니다.
 <br>
 <br>
+
 #### 4.완전그래프
 ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmPtuW%2FbtqKqyqTexj%2FUDBayShMmL3p8LGDl25uR1%2Fimg.png)
 <br>
 완전 그래프는 모든 정점이 간선으로 연결되어 있는 그래프입니다.
 <br>
 <br>
+
 ### 그래프의 탐색 
 ![image](https://blog.kakaocdn.net/dn/cFgEJ6/btqKmoJkq5a/pwm3O8T4rERuL4wSTrkgnK/img.gif)
 첫 정점에서부터 그래프에 존재하는 모든 정점들을 모두 한번씩 방문하는 것을 그래프 탐색이라고 합니다. 그래프 탐색의 방법은 깊이 우성 탐색(DFS) 방식과 너비 우선 탐색(BFS)방식이 있습니다.
 <br>
 <br>
 <br>
+
 #### 1.깊이 우선탐색(DFS)
 깊이 우선탐색 DFS는 갈 수 있는 만큼 최대한 깊이 가고, 더 이상 갈 곳이 없다면 이전 정점으로 돌아가는 방식으로 그래프를 순회하는 방식입니다. 간단히 재귀호출을 사용하여 구현하거나 스택을 사용하여 구현합니다. 
 <br>
 <br>
+
 #### 2.넓이 우선탐색(BFS)
 넓이 우선탐색 BFS는 시작정점을 방문한 후 시작 정점에 인접한 모든 정점을 방문한 후 시작 정점에 인접한 모든 정점들을 우선방문하는 방법입니다. 일반적으로 QUEUE를 사용해서 지금 위치에서 갈 수 있는 것들을 모두 큐에 넣는 방식으로 구현합니다.
 <br>
 <br>
 <br>
+
 출처 : https://coding-factory.tistory.com/610
