@@ -102,6 +102,7 @@
 
 ### 그래프의 탐색 
 ![image](https://blog.kakaocdn.net/dn/cFgEJ6/btqKmoJkq5a/pwm3O8T4rERuL4wSTrkgnK/img.gif)
+<br>
 첫 정점에서부터 그래프에 존재하는 모든 정점들을 모두 한번씩 방문하는 것을 그래프 탐색이라고 합니다. 그래프 탐색의 방법은 깊이 우성 탐색(DFS) 방식과 너비 우선 탐색(BFS)방식이 있습니다.
 <br>
 <br>
