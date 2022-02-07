@@ -1,7 +1,7 @@
 ## 그래프와 탐색(Graph_Search)
 ##### 담당자 : 박주한
 <br>
-<br>
+
 ### 그래프란?
 ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcjbjPd%2FbtqKgF6OzSD%2FU0a7BKCpfJlhx1iJzwsEy1%2Fimg.png) 
 <br>
